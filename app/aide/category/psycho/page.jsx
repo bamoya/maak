@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 
@@ -90,6 +91,25 @@ const page = () => {
             أخصائيينا النفسانيين من خلال مسح الماسح الضوئي لرمز الاستجابة
             السريعة الموجود الآتي، أو عبر النقر على الرابط الموجود أسفله
           </p>
+
+          <div className="leading-relaxed font-semibold text-amber-500 text-center text-lg pt-24">
+            <h1>
+              عقب شراكتنا مع خلية الدعم النفسي بكلية علوم التربية يمكنك
+              الاستفادة من خدمات المساعدة النفسية و الاجتماعية من خلال النقر على
+              الرابط اسفله أو عبر مسح الرمز
+            </h1>
+            <div className="flex gap-5 justify-center  pt-5 items-center">
+              <Link href={"https://cutt.ly/cspfse"} className="text-gray-800 ">
+                https://cutt.ly/cspfse
+              </Link>
+              <Image
+                src="/images/qr.jpeg"
+                width={150}
+                height={150}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

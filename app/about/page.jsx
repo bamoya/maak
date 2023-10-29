@@ -88,9 +88,9 @@ const page = () => {
               />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">
-                  Ilyas
+                  إلياس لزرق
                 </h2>
-                <h3 className="text-gray-500 mb-3">UI Developer</h3>
+                <h3 className="text-gray-500 mb-3">مسؤول التنسيق والتمويل</h3>
                 {/* <p className="mb-4">
                   DIY tote bag drinking vinegar cronut adaptogen squid fanny
                   pack vaporware.
@@ -143,14 +143,14 @@ const page = () => {
             <div className="h-full flex flex-col items-center text-center">
               <img
                 alt="team"
-                className="flex-shrink-0 rounded-lg w-full h-96 object-top object-center mb-4"
+                className="flex-shrink-0 rounded-lg w-full h-96 object-top  mb-4"
                 src="/images/amina.jpeg"
               />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">
-                  Atticus Finch
+                  أمينة أفنيدا
                 </h2>
-                <h3 className="text-gray-500 mb-3">UI Developer</h3>
+                <h3 className="text-gray-500 mb-3">مسؤولة الإعلام و التواصل</h3>
                 {/* <p className="mb-4">
                   DIY tote bag drinking vinegar cronut adaptogen squid fanny
                   pack vaporware.
@@ -208,9 +208,11 @@ const page = () => {
               />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">
-                  Wahiba
+                  وهيبة فوزي الأمراني
                 </h2>
-                <h3 className="text-gray-500 mb-3">UI Developer</h3>
+                <h3 className="text-gray-500 mb-3">
+                  منسقة الشؤون القانونية والاجتماعية
+                </h3>
                 {/* <p className="mb-4">
                   DIY tote bag drinking vinegar cronut adaptogen squid fanny
                   pack vaporware.
@@ -268,9 +270,11 @@ const page = () => {
               />
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">
-                  Gall
+                  Simbou Gail
                 </h2>
-                <h3 className="text-gray-500 mb-3">UI Developer</h3>
+                <h3 className="text-gray-500 mb-3">
+                  مسؤولة العلاقات الاجتماعية
+                </h3>
                 {/* <p className="mb-4">
                   DIY tote bag drinking vinegar cronut adaptogen squid fanny
                   pack vaporware.

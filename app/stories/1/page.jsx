@@ -4,7 +4,7 @@ import { BiArrowBack } from "react-icons/bi";
 const page = () => {
   return (
     <section className="text-gray-600 font-messiri body-font">
-      <div className="container px-5 py-28 mx-auto">
+      <div className="container px-12 py-28 mx-auto">
         <div className=" w-full mx-auto text-center">
           <div className="text-amber-500 text-right mb-5 justify-center border-amber-500 border w-fit p-4 rounded-full ">
             <Link href={"/stories"}>

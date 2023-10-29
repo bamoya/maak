@@ -1,13 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { BiArrowBack } from "react-icons/bi";
 
 const page = () => {
   return (
-    <section className="text-gray-600 font-messiri  body-font">
+    <section className="text-gray-600 container px-5 py-16 mx-auto font-messiri  body-font">
+      <div className="text-amber-500 text-right mb-5 justify-center border-amber-500 border w-fit p-4 rounded-full ">
+        <Link href={"/#cat"}>
+          <BiArrowBack size={25} />
+        </Link>
+      </div>
       <div className="container px-5 py-24 mx-auto  flex flex-row-reverse flex-wrap">
         <h1 className="font-bold text-5xl w-full -mt-2 mb-5 text-center  pb-5">
           دليل ضحايا العنف السيبيراني (الابتزاز الجنسي)
         </h1>
+        <div className="flex flex-row-reverse relative py-6 sm:items-center md:w-2/3 mx-auto">
+          <Image
+            src={"/images/women1.png"}
+            className="rounded-lg"
+            height={1080}
+            width={1920}
+          />
+        </div>
         <div className="flex flex-row-reverse relative py-6 sm:items-center md:w-2/3 mx-auto">
           <div className="h-full w-6 absolute top-0 right-0  flex  items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -229,7 +243,7 @@ const page = () => {
             href={"/aide/category"}
             className="text-center w-full underline font-semibold text-amber-500 text-lg"
           >
-            هل تحتاج بعض المساعدة الاجتماعية و القضائي
+            هل تحتاج بعض المساعدة النفسية و القانونية
           </Link>
         </div>
       </div>

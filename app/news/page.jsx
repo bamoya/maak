@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { BiArrowBack } from "react-icons/bi";
 
 const page = () => {
   return (
     <section className="text-gray-600 font-messiri body-font overflow-hidden">
       <div className="container px-5 py-32 mx-auto">
+        <div className="text-amber-500 text-right mb-8 justify-center border-amber-500 border w-fit p-4 rounded-full ">
+          <Link href={"/"}>
+            <BiArrowBack size={25} />
+          </Link>
+        </div>
         <div className="flex text-right flex-wrap -m-12">
           <div className="p-12 md:w-1/2 text-right flex flex-col items-start">
             <span className="inline-block py-1 px-2  items-end rounded bg-amber-50 text-amber-500 text-xs font-medium tracking-widest">

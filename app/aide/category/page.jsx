@@ -1,10 +1,15 @@
 import { MdAccountBalance, MdOutlinePsychologyAlt } from "react-icons/md";
-import { FaHandsPraying } from "react-icons/fa6";
 import Link from "next/link";
+import { BiArrowBack } from "react-icons/bi";
 
 const page = () => {
   return (
-    <section className="text-gray-600 font-messiri body-font">
+    <section className="text-gray-600 container px-5 py-16 mx-auto  font-messiri body-font">
+      <div className="text-amber-500 text-right mb-5 justify-center border-amber-500 border w-fit p-4 rounded-full ">
+        <Link href={"/"}>
+          <BiArrowBack size={25} />
+        </Link>
+      </div>
       <div className=" px-5 py-24 my-16 mx-auto  flex flex-wrap">
         <div className="lg:w-2/3 mx-auto">
           <div className="flex gap-5 flex-wrap justify-center items-center -mx-2">
@@ -16,7 +21,7 @@ const page = () => {
                 />
                 <div className="text-center relative z-10 w-full">
                   <h2 className="text-xl text-gray-900 text-center font-medium title-font mb-2">
-                    التدخلات السيكواجتماعية والقانونية
+                    التدخلات القانونية
                   </h2>
                   {/* <p className="leading-relaxed">
                     Skateboard +1 mustache fixie paleo lumbersexual.
@@ -56,7 +61,7 @@ const page = () => {
                 />
                 <div className="text-center relative z-10 w-full">
                   <h2 className="text-xl text-gray-900 text-center font-medium title-font mb-2">
-                    التدخلات السيكولوجية و النفسية
+                    التدخلات النفسية
                   </h2>
                   {/* <p className="leading-relaxed">
                     Skateboard +1 mustache fixie paleo lumbersexual.

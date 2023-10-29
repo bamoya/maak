@@ -7,7 +7,7 @@ import { BiSearch } from "react-icons/bi";
 
 const company = {
   name: "M3ak",
-  logo: "/images/logo.jpeg",
+  logo: "/images/logo.png",
 };
 
 const navigation = [
@@ -67,7 +67,7 @@ export default function NavBar() {
                   className="absolute left-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 flex flex-shrink-0 gap-2 items-center"
                 >
                   <img
-                    className="h-16 w-auto"
+                    className="h-24 w-auto"
                     src={company.logo}
                     alt={company.name}
                   />

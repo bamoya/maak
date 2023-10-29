@@ -3,13 +3,13 @@ import Link from "next/link";
 import { BiLogoFacebook, BiLogoInstagram } from "react-icons/bi";
 
 const social = {
-  instagram: "https://www.instagram.com/stratton.oakamont/",
-  facebook: "https://www.facebook.com/profile.php?id=100066758509222",
+  instagram: "https://www.instagram.com/maaknet4/",
+  facebook: "https://web.facebook.com/maak.net4",
 };
 
 const company = {
   name: "dima m3ak",
-  logo: "/images/logo.jpeg",
+  logo: "/images/logo.png",
 };
 
 const Footer = () => {
@@ -20,7 +20,12 @@ const Footer = () => {
           href={"#"}
           className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
-          <Image alt={company.name} width={62} height={52} src={company.logo} />
+          <Image
+            alt={company.name}
+            width={100}
+            height={60}
+            src={company.logo}
+          />
           {/* <span className="ml-3 text-xl">{company.name}</span> */}
         </Link>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">

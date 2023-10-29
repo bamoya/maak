@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       //   style={{ width: "1920px", height: "500px" }}
-      className=" bg-[url('/images/hero.png')] flex flex-col items-center justify-center text-center h-[600px]  bg-bottom text-white  body-font"
+      className=" bg-[url('/images/hero1.png')] flex flex-col items-center justify-center text-center h-[600px]  bg-center text-white  body-font"
     >
       {/* <Image
         className="absolute  inset-0"

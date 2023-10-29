@@ -4,7 +4,7 @@ import Stat from "./components/Stat";
 
 export default function Home() {
   return (
-    <main className=" font-messiri">
+    <main className="bg-gray-50  font-messiri">
       <Hero />
       <Stat />
       <Categories />
