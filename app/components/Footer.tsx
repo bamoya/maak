@@ -2,17 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiLogoFacebook, BiLogoInstagram } from "react-icons/bi";
 
-const social = {
+interface SocialLinks {
+  instagram: string;
+  facebook: string;
+}
+
+const social: SocialLinks = {
   instagram: "https://www.instagram.com/maaknet4/",
   facebook: "https://web.facebook.com/maak.net4",
 };
 
-const company = {
+interface Company {
+  name: string;
+  logo: string;
+}
+
+const company: Company = {
   name: "dima m3ak",
   logo: "/images/logo.png",
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="text-gray-600 bg-gray-100 border-t-2 border-gray-300 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">

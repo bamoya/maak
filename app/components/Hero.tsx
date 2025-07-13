@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const cta = {
+interface Cta {
+  subtitle: string;
+  title: string;
+  buttonAction: {
+    text: string;
+    href: string;
+  };
+}
+const cta: Cta = {
   subtitle: "تعرضت لابتزاز جنسي رقمي ؟",
   title: "أكسر حاجز الصمت, نحن معك",
   buttonAction: {
@@ -10,7 +18,7 @@ const cta = {
   },
 };
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
     <section
       //   style={{ width: "1920px", height: "500px" }}
@@ -44,3 +52,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;

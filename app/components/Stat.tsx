@@ -1,6 +1,6 @@
 import { AiOutlineMan, AiOutlineWoman } from "react-icons/ai";
 
-export default function Stat() {
+const Stat: React.FC = () => {
   return (
     <section className="text-gray-600 bg-gray-50 py-16 body-font">
       <div className="container px-5 py-12 mx-auto">
@@ -21,9 +21,9 @@ export default function Stat() {
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="text-amber-500 w-12 h-12 mb-3 inline-block"
                 viewBox="0 0 24 24"
               >
@@ -43,9 +43,9 @@ export default function Stat() {
               {/* <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="text-amber-500 w-12 h-12 mb-3 inline-block"
                 viewBox="0 0 24 24"
               >
@@ -73,3 +73,5 @@ export default function Stat() {
     </section>
   );
 }
+
+export default Stat;

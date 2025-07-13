@@ -1,16 +1,26 @@
 "use client";
-import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { HiBars3, HiMiniXMark } from "react-icons/hi2";
 import Link from "next/link";
+import Image from "next/image";
 import { BiSearch } from "react-icons/bi";
 
-const company = {
+interface Company {
+  name: string;
+  logo: string;
+}
+
+const company: Company = {
   name: "M3ak",
   logo: "/images/logo.png",
 };
 
-const navigation = [
+interface NavItem {
+  name: string;
+  href: string;
+}
+
+const navigation: NavItem[] = [
   {
     name: "الرئيسية",
     href: "/",
@@ -23,14 +33,9 @@ const navigation = [
     name: "عنا",
     href: "/about",
   },
-  // {
-  //   name: "Home",
-  //   href: "#home",
-  // },
 ];
 
 export default function NavBar() {
-  const [isopen, setIsOpen] = useState(false);
   return (
     <Disclosure as="nav" className="bg-white	 shadow-md">
       {({ open }) => (
@@ -50,13 +55,7 @@ export default function NavBar() {
                       />
                     </div>
                   ) : (
-                    <div onClick={() => setIsOpen(!isopen)}>
-                      <HiBars3
-                        onClick={() => setIsOpen(!isopen)}
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    </div>
+                    <HiBars3 className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -66,19 +65,18 @@ export default function NavBar() {
                   href="/"
                   className="absolute left-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 flex flex-shrink-0 gap-2 items-center"
                 >
-                  <img
+                  <Image
                     className="h-24 w-auto"
                     src={company.logo}
                     alt={company.name}
+                    width={96}
+                    height={96}
                   />
-                  {/* <h1 className="text-3xl font-messiri font-semibold text-neutral  md:block ">
-                    {company.name}
-                  </h1> */}
                 </Link>
 
                 <div className="hidden absolute right-0 md:ml-6 md:block">
                   <div className="flex flex-row-reverse text-right gap-6 ">
-                    {navigation.map((item, index) => (
+                    {navigation.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
@@ -98,9 +96,8 @@ export default function NavBar() {
           {open && (
             <Disclosure.Panel className="absolute inset-0  top-20  pb-4  bg-white h-fit shadow-md  md:hidden">
               <div className="space-y-5 px-2 pb-3 pt-2 text-center z-50">
-                {navigation.map((item, index) => (
+                {navigation.map((item) => (
                   <Link
-                    onClick={() => setIsOpen(false)}
                     key={item.name}
                     href={item.href}
                     className="block text-gray-900 text-xl hover:text-amber-500 font-bold "
