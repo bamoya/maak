@@ -16,6 +16,7 @@ const page = () => {
         </h1>
         <div className="flex flex-row-reverse relative py-6 sm:items-center md:w-2/3 mx-auto">
           <Image
+            alt="women1"
             src={"/images/women1.png"}
             className="rounded-lg"
             height={1080}

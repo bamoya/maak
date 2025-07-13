@@ -1,48 +1,70 @@
 import Link from "next/link";
-import { BiArrowBack } from "react-icons/bi";
+// Replaced icons with lucide-react for consistency
+import { ArrowLeft, ArrowRight, Eye, MessageCircle } from "lucide-react";
 
-const page = () => {
+// All news article data is now centralized in this array
+const newsArticles = [
+  {
+    category: "هكاثون",
+    title: "Hackathon العنف السيبيراني",
+    description: "تنظم اللجنة الجهوية لحقوق الإنسان الرباط- سلا- القنيطرة، بشراكة مع المعهد العالي للإعلام والاتصال النسخة الأولى من برنامج هاكاتون Hackathon تحت عنوان العنف السيبيراني.",
+    link: "/news/1",
+    views: "1.2K",
+    comments: 6,
+  },
+  {
+    category: "ندوة",
+    title: "ندوة حول موضوع تطور أشكال الابتزاز السيبراني وسبل التصدي لها",
+    description: "تنظم المؤسسة جمعية الامان ندوة حول موضوع تطور أشكال الابتزاز السيبراني وسبل التصدي لها وذلك يوم 4 نونبر 2023 على الساعة 10:00 صباحا.",
+    link: "/news/2",
+    views: "1.2K",
+    comments: 6,
+  },
+  // You can easily add more news articles here
+];
+
+const NewsPage = () => {
   return (
-    <div className="container mx-auto py-24">
-      <div className="text-amber-500 text-right mb-5 justify-center border-amber-500 border w-fit p-4 rounded-full ">
-        <Link href={"/"}>
-          <BiArrowBack size={25} />
-        </Link>
-      </div>
-      <div className="flex flex-col font-messiri h-full justify-center items-center ">
-        <h1 className="text-center  text-gray-900 text-6xl mb-10">
-          شارك تجربتك مع الناس
-        </h1>
-        <div className="relative flex-col  items-center justify-end mb-4 w-1/2">
-          <label className="leading-7 inline-block  text-right w-full text-sm text-gray-600">
-            العنوان
-          </label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            className="w-full bg-white text-right rounded border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-          />
+    <section className="text-gray-600 font-messiri body-font overflow-hidden">
+      <div className="container px-5 py-32 mx-auto">
+        {/* Back Button */}
+        <div className="text-amber-500 text-right mb-8">
+          <Link href="/" className="border-amber-500 border w-fit p-4 rounded-full inline-block">
+            <ArrowLeft size={25} />
+          </Link>
         </div>
-        <div className="relative mb-4 w-1/2">
-          <label className="leading-7 inline-block  text-right w-full text-sm text-gray-600">
-            الموضوع
-          </label>
 
-          <textarea
-            className="w-full bg-white text-right rounded border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            id="w3review"
-            name="w3review"
-            rows="4"
-            cols="50"
-          ></textarea>
+        <div className="flex text-right flex-wrap -m-12">
+          {/* Loop over the newsArticles array to render each article card */}
+          {newsArticles.map((article, index) => (
+            <div key={index} className="p-12 md:w-1/2 text-right flex flex-col items-start">
+              <span className="inline-block py-1 px-2 rounded bg-amber-50 text-amber-500 text-xs font-medium tracking-widest">
+                {article.category}
+              </span>
+              <h2 className="sm:text-3xl text-2xl w-full title-font font-medium text-gray-900 mt-4 mb-4">
+                {article.title}
+              </h2>
+              <p className="leading-relaxed mb-8">{article.description}</p>
+              <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                <Link href={article.link} className="text-amber-500 inline-flex items-center group">
+                  اقرأ المزيد
+                  <ArrowRight className="w-4 h-4 mr-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <span className="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <Eye className="w-4 h-4 mr-1" />
+                  {article.views}
+                </span>
+                <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <MessageCircle className="w-4 h-4 mr-1" />
+                  {article.comments}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
-        <button className="text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
-          أنشر
-        </button>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default page;
+export default NewsPage;
